@@ -37,6 +37,7 @@ Xout = X0.';
 teout = [];
 Xeout = [];
 ieout = [];
+
 %% Flight Phase
 options = odeset('RelTol',1e-2,'AbsTol',1e-2,...
                      'Events',@(t,x)sim_flight_events(t,x,leg),'Stats','off');
