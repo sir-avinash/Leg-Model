@@ -20,7 +20,7 @@ init_shin_symbols;
 %% --------------------- Derive Flight Phase EOM ---------------------------------
 
 % Define driven variables
-gamma = {l1};
+gamma = {};
 
 [EOMa, Da, ha, Ga, Ba] = shin_DynsAir(shin,Qa,gamma);
 
@@ -32,7 +32,7 @@ Ba = subs(Ba,[Qa.qt, Qa.qt_dot],[Qa.q,Qa.q_dot]);
 
 %% --------------------- Derive Stance Phase EOM ---------------------------------
 
-[EOMg, Dg, hg, Gg, Bg] = newleg_DynsStance(shin,Qg,gamma);
+[EOMg, Dg, hg, Gg, Bg] = shin_DynsStance(shin,Qg,gamma);
 
 % Substitue time variable symbol representation
 Dg = subs(Dg,[Qg.qt, Qg.qt_dot],[Qg.q,Qg.q_dot]);
