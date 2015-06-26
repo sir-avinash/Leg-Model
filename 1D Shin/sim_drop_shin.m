@@ -14,7 +14,7 @@ params.ground.y_td = 0;
 % Set initial conditions
 th1_0 = 0;
 l1_0 = 0.3;
-ycm_0 = 2;
+ycm_0 = 2.5;
 
 dth1_0 = 0;
 dl1_0 = 0;

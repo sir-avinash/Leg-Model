@@ -17,7 +17,7 @@ dl1 = X(4);
 %%  Determine if in flight or stance phase
 %% ------------ Input Forces ---------------
 % Damper
-% Fd = -Kd*dl1;
+Fd = -Kd*dl1;
 
 %%%%% Piotr Model %%%%%
 alf0 = -23.1;
@@ -27,11 +27,12 @@ gam0 = 1.6;
 del0 = 0;
 eta0 = 1202.7;
 kap0 = 1297;
-i=1;
-Fd = (alf0 + alf1*sqrt(i))*tanh(beta0*dl1 + gam0*sign(l1))+ del0*l1 + eta0*dl1 + kap0;
+
+F = (alf0 + alf1*sqrt())*tanh(beta0*dl1 + gam0*sign(l1))+ gam0*l1 + eta0*dl1 + kap0;
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%
-
 % Spring
 lspring = shin.l1max- l1;
 if(l1  < shin.l1min)     % spring maxed expansion
